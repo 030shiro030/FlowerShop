@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/Style.css" />
+    <link rel="icon" href="./Image/fk6rk-egofs-001.ico"/>
+
+    <title>首頁 | 美麗花坊</title>
+    
+    </head>
+<header>
+        <h1 id="header" class="icon">
+            <img src="./Image/Pink_Brown_Cute_Simple_Flower_Shop_Logo__2_-removebg-preview.png">
+        </h1>
+        <div class="navbar">
+            <a class="navicon" onclick="menu()">
+                <img src="./Image/Icon/Menu.png">
+            </a>
+            <nav id="navbar" class="navbar_01">
+                <a id="nav_main" class="nav" href="./Main.html">首頁</a>
+                <div class="dropdown-Holiday">
+                    <a id="nav_main" class="nav">節日</a>
+                    <div class="dropdown-Holiday-content">
+                        <ul>
+                            <li><a href="./Typeproducts.html" onclick="productType('情人節花束')">情人節</a></li>
+                            <li><a href="./Typeproducts.html" onclick="productType('新年花束')">新年</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a id="nav_main" class="nav">鮮花</a>
+                    <div class="dropdown-content">
+                        <div class="row">
+                            <div class="row-center">
+                            <div class="column">
+                                <h3>全部</h3>
+                                <a href="./products.html">所有產品</a>
+                            </div>
+                            <div class="column">
+                                <h3>花束</h3>
+                                <a href="./Typeproducts.html" onclick="productType('花束')">查看所有商品</a>
+                                <a href="./Typeproducts.html" onclick="productType('繽紛花束')">繽紛花束</a>
+                                <a href="./Typeproducts.html" onclick="productType('浪漫花束')">浪漫花束</a>
+                                <a href="./Typeproducts.html" onclick="productType('純白花束')">純白花束</a>
+                            </div>
+                            <div class="column">
+                                <h3>花箱</h3>
+                                <a href="./Typeproducts.html" onclick="productType('花箱')">查看所有商品</a>
+                                <a href="./Typeproducts.html" onclick="productType('特色花盒')">特色花盒</a>
+                                <a href="./Typeproducts.html" onclick="productType('圓頂形花箱')">圓頂形花箱</a>
+                                <a href="./Typeproducts.html" onclick="productType('自然風花箱')">自然風花箱</a>
+                            </div>
+                            <div class="column">
+                                <h3>收藏</h3>
+                                <a href="./Typeproducts.html" onclick="productType('蘭花系列')">蘭花系列</a>
+                            </div>
+                            <div class="column">
+                                <h3>婚禮</h3>
+                                <a href="./Typeproducts.html" onclick="productType('新娘捧花')">新娘捧花</a>
+                            </div>
+                            <div class="column">
+                                <h3>安排</h3>
+                                <a href="./Typeproducts.html" onclick="productType('桌面佈置')">桌面佈置</a>
+                                <a href="./Typeproducts.html" onclick="productType('花瓶插花')">花瓶插花</a>
+                                <a href="./Typeproducts.html" onclick="productType('其他安排')">其他安排</a>
+                            </div>
+                            <div class="column">
+                                <h3>花架</h3>
+                                <a href="./Typeproducts.html" onclick="productType('開幕花籃')">開幕花籃</a>
+                                <a href="./Typeproducts.html" onclick="productType('悼念花籃')">悼念花籃</a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <nav id="navbar" class="navbar_02">
+                <a id="nav_main" class="nav_main Cart" onclick="sideCart()"><img style="height: 25px;" src="./Image/Icon/ShopCart.png"></a>
+                <a id="nav_main-member" class="nav_main" href="./Login.html"><img style="height: 20px;" src="./Image/Icon/Man.png"></a>
+            </nav>
+        </div>
+        <!-- Sidenav -->
+        <div id="mySidenav" class="sidenav close">
+            <a class="navCloseIcon" onclick="menu()">
+                <img src="./Image/Icon/Close.png">
+            </a>
+            <a id="" href="./Main.html">首頁</a>
+            <a id="" onclick="hideSidefestivalUl()">節日</a>
+            <div id="sideNav_festival" class="sideNav_festival">
+                    <ul id="sideNav_festival-ul" class="sideNav_festival-ul"></ul>
+                        <li><a href="./Typeproducts.html" onclick="productType('情人節花束')">情人節</a></li>
+                        <li><a href="./Typeproducts.html" onclick="productType('新年花束')">新年</a></li>
+                    </ul>
+                </div>
+            <a id="" onclick="openSideFlowerNav()">鮮花 </a>
+        </div>
+        <!-- FlowerNav -->
+        <div id="mySideFlowerNav" class="sideFlowerNav close">
+            <a class="navCloseIcon" onclick="closeSideFlowerNav()">
+                <img src="./Image/Icon/Close.png">
+            </a>
+            <a id="" onclick="hideSideFlowerNavBouquetUl()">花束</a>
+                <div id="sideNav_bouquet" class="sideNav_bouquet">
+                    <ul id="sideNav_bouquet-ul" class="sideNav_bouquet-ul"></ul>
+                        <li><a href="./Typeproducts.html" onclick="productType('花束')">查看所有商品</a></li>
+                        <li><a href="./Typeproducts.html" onclick="productType('繽紛花束')">繽紛花束</a></li>
+                        <li><a href="./Typeproducts.html" onclick="productType('浪漫花束')">浪漫花束</a></li>
+                        <li><a href="./Typeproducts.html" onclick="productType('純白花束')">純白花束</a></li>
+                    </ul>
+                </div>
+            <a id="" onclick="hideSideFlowerNavFlowerBoxesUl()">花箱</a>
+                <div id="sideNav_flowerBoxes" class="sideNav_flowerBoxes">
+                    <ul class="sideNav_flowerBoxes-ul"></ul>
+                        <li><a href="./Typeproducts.html" onclick="productType('花箱')">查看所有商品</a></li>
+                        <li><a href="./Typeproducts.html" onclick="productType('特色花盒')">特色花盒</a></li>
+                        <li><a href="./Typeproducts.html" onclick="productType('圓頂形花箱')">圓頂形花箱</a></li>
+                        <li><a href="./Typeproducts.html" onclick="productType('自然風花箱')">自然風花箱</a></li>
+                    </ul>
+                </div>
+            <a id="" onclick="hideSideFlowerNavCollectionUl()">收藏</a>
+                <div id="sideNav_collection" class="sideNav_collection">
+                    <ul class="sideNav_collection-ul"></ul>
+                        <li><a href="./Typeproducts.html" onclick="productType('蘭花系列')">蘭花系列</a></li>
+                    </ul>
+                </div>
+            <a id="" onclick="hideSideFlowerNavWeddingUl()">婚禮</a>
+                <div id="sideNav_wedding" class="sideNav_wedding">
+                    <ul class="sideNav_wedding-ul"></ul>
+                        <li><a href="./Typeproducts.html" onclick="productType('新娘捧花')">新娘捧花</a></li>
+                    </ul>
+                </div>
+            <a id="" onclick="hideSideFlowerNavArrangementsUl()">安排</a>
+                <div id="sideNav_arrangements" class="sideNav_arrangements">
+                    <ul class="sideNav_warrangements-ul"></ul>
+                        <li><a href="./Typeproducts.html" onclick="productType('桌面佈置')">餐桌佈置</a></li>
+                        <li><a href="./Typeproducts.html" onclick="productType('花瓶插花')">花瓶插花</a></li>
+                        <li><a href="./Typeproducts.html" onclick="productType('其他安排')">其他安排</a></li>
+                    </ul>
+                </div>
+            <a id="" onclick="hideSideFlowerNavFlowerStandsUl()">花架</a>
+                <div id="sideNav_flowerStands" class="sideNav_flowerStands">
+                    <ul class="sideNav_flowerStands-ul"></ul>
+                        <li><a href="./Typeproducts.html" onclick="productType('開幕花籃')">開幕花籃</a></li>
+                        <li><a href="./Typeproducts.html" onclick="productType('悼念花籃')">悼念花籃</a></li>
+                    </ul>
+                </div>
+        </div>
+        <!-- CartNav -->
+        <div id="mySideCartnav" class="sideCartNav close">
+            <a class="navCloseIcon_Cart" onclick="sideCart()">
+                <img src="./Image/Icon/Close.png">
+            </a>
+            <a class="sideCartNav-Text">購物車</a>
+            <div id="sideCartNav-Div-NullText" class="sideCartNav-Div-NullText">
+                <a class="sideCartNav-NullText">購物車是空的</a>
+            </div>
+            <div id="listCart" class="listCart">
+                <!-- Item -->
+                <!-- <div class="CartItem">
+                    <div class="image">
+                        <img src="./Image/Item/IMG_1318.webp">
+                    </div>
+                    <div class="name">
+                        123
+                    </div>
+                    <div class="type">
+                        color/size/box-color
+                    </div>
+                    <div class="totalPrice">
+                        $100
+                    </div>
+                    <div class="quantity">
+                        <a class="minus" onclick="">-</a>
+                        <a class="num" onclick="">12</a>
+                        <a class="plus" onclick="">+</a>
+                        <div class="remove">
+                            <a class="remove">清除</a>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- Item -->
+            </div>
+            
+            <div class="sideCartNav-Div-ToPay hide">
+                <a class="sideCartNav-ToPay">如有配送費，將在結帳時計算。</a>
+                <a class="sideCartNav-ToPay-Btn" href="./paycart.html">下單</a>
+            </div>
+            
+            
+        </div>
+    </header>
+<body>
+  <br><br><br><br><br>
+<h2>運輸和交付</h2>
+<p>
+
+<br><h2>送貨服務</h2>
+
+<br>除非另有指明，若你在星期一至星期日上午 11 時前落單，可享有即日送貨服務。請留意，對於即日送貨的訂單，花卉的選擇會受限于我們現有的存貨。<br>
+
+<br>在情人節、母親節、聖誕節及元旦的送貨服務，訂單需至少提前 3 天下單。<br>
+
+<br>除非另有指明 美麗花坊 在農曆新年首三天休息，並不提供送貨服務。<br>
+
+<br>當懸掛八號颱風訊號或黑色暴雨警告生效時，所有送貨服務將會暫停，我們的店舖會透過電郵或電話聯絡你重新安排送貨時間。<br>
+
+<br>雖然我們會盡一切努力確保按要求的日期送貨，但你要明白，在某些情況下可能無法按要求的條件送貨。倘若因地址不完整或不準確、收件人無法接收送貨、缺少收件人的電話資料、收件人拒絕接收等等原因而無法完成送貨，我們的店舖會透過電郵或電話聯絡你解決問題。我們會在其後的下一個工作日嘗試再次送貨，費用由我們全權決定。任何額外的送貨嘗試均需收取重新送貨的費用。<br>
+
+<br>若在送貨過程中有第三方參與，例如醫院和辦公室，任何獲授權代表該機構接收送貨的人士的簽名，將會被視為已送達你所選擇的收件人的證明。<br>
+
+<!-- <br><h2>送貨費用</h2>
+
+<br>美麗花坊 致力於以最細心和高效的方式為你送達花藝作品。我們的標準送貨費用如下：<br>
+
+<br>對於實際送貨地址位於離島（香港島、九龍及新界以外）的網上訂單，可能需額外收取費用。我們的團隊會聯絡客戶了解進一步詳情。離島包括愉景灣、赤鱲角及東涌地區。<br>
+
+<br>香港島：港幣 100 元<br>
+
+<br>九龍：港幣 150 元<br>
+
+<br>新界：港幣 150 元<br>
+
+<br>郊區（離島）：港幣 300 元<br> -->
+
+<br><h2>退貨政策</h2>
+
+<br>由於鮮花是易腐的天然物品，所有銷售一經售出概不退換。若訂單已完成送貨，而收件人對花藝作品的質量不完全滿意，收件人應在收到貨品後的 24 小時內聯絡 美麗花坊，並在有合理理由的情況下要求全數更換。所有更換的送貨費用由我們酌情決定。<br>
+
+<br><h2>訂單更改</h2>
+
+<br>在預定送貨日期前 48 小時內可更改訂單。若要更改訂單，請使用確認電郵中列出的聯絡資料或我們網站「店舖位置」頁面上的聯絡方式與我們的店舖聯絡。<br>
+
+<br><h2>取消訂單</h2>
+
+<br>美麗花坊 對已取消的訂單不提供退款服務。<br>
+</p>
+<br>
+<footer>
+        <div class="footer">
+        <div class="footer_Introduction">
+            <h5>美麗花坊</h5>
+            <p>美麗花坊是一家高級當地精品花店及花藝設計工作室，提供鮮花、永生花、花束和氣球禮盒。歡迎您透過美麗花坊訂購鮮花，送給您的摯愛親朋。每份花藝禮物均由專業花藝師手工製作，可直接送貨上門或到店自取。</p>
+        </div>
+        <div class="footer_Information">
+            <h5>資訊</h5>
+            <ui>
+                <li><a href="./VisitUs.html">歡迎光臨</a></li>
+                <li><a href="./contact.html">聯絡我們</a></li>
+                <li><a href="./delivery.html">取貨和送貨</a></li>
+                <li><a href="./FAQ.html">常問問題</a></li>
+            </ui>
+        </div>
+        <div class="footer_About">
+            <h5>關於</h5>
+            <ui>
+                <li><a href="./about.html">關於美麗花坊</a></li>
+                <li><a href="./privacy_policy.html">私隱政策聲明</a></li>
+            </ui>
+        </div>
+        </div>
+        <div class="footer_Name">
+            <h5>Made by Mok Chi Him</h5>
+        </div>
+    </footer>
+    <script src="./JavaScript/Navbar.js"></script>
+    <script src="./JavaScript/ShoppingCart.js"></script>
+  
+</body></html>
+   

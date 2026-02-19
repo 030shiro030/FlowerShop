@@ -1,0 +1,12 @@
+.content{
+    display: inline-flex;
+}
+
+.content .text{
+    align-self: center;
+    margin-left: 50px;
+}
+
+main{
+    height: 65vh;
+}

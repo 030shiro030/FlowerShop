@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/Style.css" />
+    <link rel="icon" href="./Image/fk6rk-egofs-001.ico"/>
+    </head>
+     <header>
+        <h1 id="header" class="icon">
+            <img src="./Image/Pink_Brown_Cute_Simple_Flower_Shop_Logo__2_-removebg-preview.png">
+        </h1>
+        <div class="navbar">
+            <a class="navicon" onclick="menu()">
+                <img src="./Image/Icon/Menu.png">
+            </a>
+            <nav id="navbar" class="navbar_01">
+                <a id="nav_main" class="nav" href="./Main.html">首頁</a>
+                <div class="dropdown-Holiday">
+                    <a id="nav_main" class="nav">節日</a>
+                    <div class="dropdown-Holiday-content">
+                        <ul>
+                            <li><a href="./Typeproducts.html" onclick="productType('情人節花束')">情人節</a></li>
+                            <li><a href="./Typeproducts.html" onclick="productType('新年花束')">新年</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a id="nav_main" class="nav">鮮花</a>
+                    <div class="dropdown-content">
+                        <div class="row">
+                            <div class="row-center">
+                            <div class="column">
+                                <h3>全部</h3>
+                                <a href="./products.html">所有產品</a>
+                            </div>
+                            <div class="column">
+                                <h3>花束</h3>
+                                <a href="./Typeproducts.html" onclick="productType('花束')">查看所有商品</a>
+                                <a href="./Typeproducts.html" onclick="productType('繽紛花束')">繽紛花束</a>
+                                <a href="./Typeproducts.html" onclick="productType('浪漫花束')">浪漫花束</a>
+                                <a href="./Typeproducts.html" onclick="productType('純白花束')">純白花束</a>
+                            </div>
+                            <div class="column">
+                                <h3>花箱</h3>
+                                <a href="./Typeproducts.html" onclick="productType('花箱')">查看所有商品</a>
+                                <a href="./Typeproducts.html" onclick="productType('特色花盒')">特色花盒</a>
+                                <a href="./Typeproducts.html" onclick="productType('圓頂形花箱')">圓頂形花箱</a>
+                                <a href="./Typeproducts.html" onclick="productType('自然風花箱')">自然風花箱</a>
+                            </div>
+                            <div class="column">
+                                <h3>收藏</h3>
+                                <a href="./Typeproducts.html" onclick="productType('蘭花系列')">蘭花系列</a>
+                            </div>
+                            <div class="column">
+                                <h3>婚禮</h3>
+                                <a href="./Typeproducts.html" onclick="productType('新娘捧花')">新娘捧花</a>
+                            </div>
+                            <div class="column">
+                                <h3>安排</h3>
+                                <a href="./Typeproducts.html" onclick="productType('桌面佈置')">桌面佈置</a>
+                                <a href="./Typeproducts.html" onclick="productType('花瓶插花')">花瓶插花</a>
+                                <a href="./Typeproducts.html" onclick="productType('其他安排')">其他安排</a>
+                            </div>
+                            <div class="column">
+                                <h3>花架</h3>
+                                <a href="./Typeproducts.html" onclick="productType('開幕花籃')">開幕花籃</a>
+                                <a href="./Typeproducts.html" onclick="productType('悼念花籃')">悼念花籃</a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <nav id="navbar" class="navbar_02">
+                <a id="nav_main" class="nav_main Cart" onclick="sideCart()"><img style="height: 25px;" src="./Image/Icon/ShopCart.png"></a>
+                <a id="nav_main-member" class="nav_main" href="./Login.html"><img style="height: 20px;" src="./Image/Icon/Man.png"></a>
+            </nav>
+        </div>
+        <!-- Sidenav -->
+        <div id="mySidenav" class="sidenav close">
+            <a class="navCloseIcon" onclick="menu()">
+                <img src="./Image/Icon/Close.png">
+            </a>
+            <a id="" href="./Main.html">首頁</a>
+            <a id="" onclick="hideSidefestivalUl()">節日</a>
+            <div id="sideNav_festival" class="sideNav_festival">
+                    <ul id="sideNav_festival-ul" class="sideNav_festival-ul"></ul>
+                        <li><a href="./Typeproducts.html" onclick="productType('情人節花束')">情人節</a></li>
+                        <li><a href="./Typeproducts.html" onclick="productType('新年花束')">新年</a></li>
+                    </ul>
+                </div>
+            <a id="" onclick="openSideFlowerNav()">鮮花 </a>
+        </div>
+        <!-- FlowerNav -->
+        <div id="mySideFlowerNav" class="sideFlowerNav close">
+            <a class="navCloseIcon" onclick="closeSideFlowerNav()">
+                <img src="./Image/Icon/Close.png">
+            </a>
+            <a id="" onclick="hideSideFlowerNavBouquetUl()">花束</a>
+                <div id="sideNav_bouquet" class="sideNav_bouquet">
+                    <ul id="sideNav_bouquet-ul" class="sideNav_bouquet-ul"></ul>
+                        <li><a href="./Typeproducts.html" onclick="productType('花束')">查看所有商品</a></li>
+                        <li><a href="./Typeproducts.html" onclick="productType('繽紛花束')">繽紛花束</a></li>
+                        <li><a href="./Typeproducts.html" onclick="productType('浪漫花束')">浪漫花束</a></li>
+                        <li><a href="./Typeproducts.html" onclick="productType('純白花束')">純白花束</a></li>
+                    </ul>
+                </div>
+            <a id="" onclick="hideSideFlowerNavFlowerBoxesUl()">花箱</a>
+                <div id="sideNav_flowerBoxes" class="sideNav_flowerBoxes">
+                    <ul class="sideNav_flowerBoxes-ul"></ul>
+                        <li><a href="./Typeproducts.html" onclick="productType('花箱')">查看所有商品</a></li>
+                        <li><a href="./Typeproducts.html" onclick="productType('特色花盒')">特色花盒</a></li>
+                        <li><a href="./Typeproducts.html" onclick="productType('圓頂形花箱')">圓頂形花箱</a></li>
+                        <li><a href="./Typeproducts.html" onclick="productType('自然風花箱')">自然風花箱</a></li>
+                    </ul>
+                </div>
+            <a id="" onclick="hideSideFlowerNavCollectionUl()">收藏</a>
+                <div id="sideNav_collection" class="sideNav_collection">
+                    <ul class="sideNav_collection-ul"></ul>
+                        <li><a href="./Typeproducts.html" onclick="productType('蘭花系列')">蘭花系列</a></li>
+                    </ul>
+                </div>
+            <a id="" onclick="hideSideFlowerNavWeddingUl()">婚禮</a>
+                <div id="sideNav_wedding" class="sideNav_wedding">
+                    <ul class="sideNav_wedding-ul"></ul>
+                        <li><a href="./Typeproducts.html" onclick="productType('新娘捧花')">新娘捧花</a></li>
+                    </ul>
+                </div>
+            <a id="" onclick="hideSideFlowerNavArrangementsUl()">安排</a>
+                <div id="sideNav_arrangements" class="sideNav_arrangements">
+                    <ul class="sideNav_warrangements-ul"></ul>
+                        <li><a href="./Typeproducts.html" onclick="productType('桌面佈置')">餐桌佈置</a></li>
+                        <li><a href="./Typeproducts.html" onclick="productType('花瓶插花')">花瓶插花</a></li>
+                        <li><a href="./Typeproducts.html" onclick="productType('其他安排')">其他安排</a></li>
+                    </ul>
+                </div>
+            <a id="" onclick="hideSideFlowerNavFlowerStandsUl()">花架</a>
+                <div id="sideNav_flowerStands" class="sideNav_flowerStands">
+                    <ul class="sideNav_flowerStands-ul"></ul>
+                        <li><a href="./Typeproducts.html" onclick="productType('開幕花籃')">開幕花籃</a></li>
+                        <li><a href="./Typeproducts.html" onclick="productType('悼念花籃')">悼念花籃</a></li>
+                    </ul>
+                </div>
+        </div>
+        <!-- CartNav -->
+        <div id="mySideCartnav" class="sideCartNav close">
+            <a class="navCloseIcon_Cart" onclick="sideCart()">
+                <img src="./Image/Icon/Close.png">
+            </a>
+            <a class="sideCartNav-Text">購物車</a>
+            <div id="sideCartNav-Div-NullText" class="sideCartNav-Div-NullText">
+                <a class="sideCartNav-NullText">購物車是空的</a>
+            </div>
+            <div id="listCart" class="listCart">
+                <!-- Item -->
+                <!-- <div class="CartItem">
+                    <div class="image">
+                        <img src="./Image/Item/IMG_1318.webp">
+                    </div>
+                    <div class="name">
+                        123
+                    </div>
+                    <div class="type">
+                        color/size/box-color
+                    </div>
+                    <div class="totalPrice">
+                        $100
+                    </div>
+                    <div class="quantity">
+                        <a class="minus" onclick="">-</a>
+                        <a class="num" onclick="">12</a>
+                        <a class="plus" onclick="">+</a>
+                        <div class="remove">
+                            <a class="remove">清除</a>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- Item -->
+            </div>
+            
+            <div class="sideCartNav-Div-ToPay hide">
+                <a class="sideCartNav-ToPay">如有配送費，將在結帳時計算。</a>
+                <a class="sideCartNav-ToPay-Btn" href="./paycart.html">下單</a>
+            </div>
+            
+            
+        </div>
+    </header>
+<body>
+<br><br><br><br><br>
+<h2>私隱政策聲明</h2><br>
+
+<br>1. 承諾<br>
+<br>大企業有限公司以美麗花坊(FNF)作為營運名稱了解及明白客戶和網站訪客關注信息的私隱。FNF承諾遵守香港特別行政區《個人資料（私隱）條例》（第486章）的規定。<br>
+
+<br>本私隱政策聲明概述了FNF對收集和使用您的個人資料的處理和做法及您可作的相關選擇。<br>
+
+<br>2. 資料搜集<br>
+<br>您可能不時獲邀，透過FNF的網站或通過其他媒介，自願向FNF提供您的個人資料作不同用途。如您未滿十八歲，在您向FNF提供您的個人資料前，須先徵得您的父母或監護人的同意。<br>
+
+<br>3. 網絡記錄<br>
+<br>當您瀏覽FNF的網站時，FNF的伺服器將只收集您的瀏覽數據（包括但不限於您的網絡協議位址 (IP address)、域名、瀏覽器類型及瀏覽時間等），但不會收集您的個人資料。<br>
+
+
+<br>4. Cookies的使用和其他追蹤機制<br>
+<br>當您瀏覽FNF的網站時，cookies將被儲存在您的電腦、手機或其他上網設備中，以作內部導航及編程之用。我們可能使用cookies和其他下述的追蹤機制以追蹤有關您使用FNF網站或流動應用程序的信息。我們可能將此信息與我們從您收集的其他個人信息相結合，以更好地為您服務和/或在跨過多個頁面或一個或以上的session維持您的信息。<br>
+
+<br>cookies是我們通過您的網絡瀏覽器傳輸字母數字標識符到您的電腦、手機或其他上網設備，以作保存記錄之用。有些cookies可讓我們為您安排更容易地瀏覽FNF網站或流動應用程序，而其他則應用於加快登入程序，或允許我們於FNF的網站或流動應用程序中存儲和追蹤您的興趣和偏好。<br>
+
+<br>我們還會委託第三方追蹤和分析來自網站或流動應用程式的非個人身份數據。我們使用這些第三方收集的數據來幫助我們管理和改善FNF網站或流動應用程式的質素，並分析其使用情況。這些第三方可將我們提供關於您的信息與他們收集的其他信息相結合。您可以通過編輯您的瀏覽器設置來禁用cookies，一旦cookies被禁用，您可能無法繼續使用FNF的網站的某些功能。<br>
+
+<br>我們亦可能會蒐集 閣下的網絡協議位址、瀏覽器類別、網域名稱及存取時間等資料。此類資料會用作FNF研究之用。此類資料與任何個人資料並無關連及為獨立的。於特殊情況下，網絡協定位址可用作協助阻嚇及／或防止在網站内的濫用或犯罪行為。<br>
+
+<br>如您於社交媒體平台上與我們互動（例如對FNF的Facebook頁面「讚好」），FNF將可與 閣下互動，並透過此等平台向 閣下傳送訊息。FNF將按照有關社交媒體平台的規則與您互動，但我們不會為該平台的營運商如何收集並處理 您的個人資料而負上責任。我們不會為我們的社交媒體賬戶上的第三方貼文而負上責任。<br>
+
+<br>5. 所收集的資料種類<br>
+<br>由於FNF在營運業務上的不同需要，您可能須向FNF提供您的一些個人資料，包括您的姓名、性別、出生日期、電子郵箱地址、通信地址、聯絡號碼、會員編號、年齡、婚姻狀況、家庭狀況、教育水平、職業、用戶名及密碼等。有關所收集的個人資料及資訊將陳列於相關的《個人資料收集聲明》之內並於收集個人資料及資訊時提供。<br>
+
+<br>6. 所得資料的主要目的及使用<br>
+<br>FNF會將您的個人資料用於收集資料時所提供的相關《個人資料收集聲明》中所陳列的用途。<br>
+
+<br>此外，FNF可能會將您的個人資料用於以下目的：<br>
+
+<br>a. 識別和驗證您的身份;<br>
+
+<br>b. 就您使用FNF的服務、產品、流動應用程序和/或網站（視情況而定）與您溝通;<br>
+
+<br>c. 日常運作和管理，包括但不限於建立帳戶和保養;<br>
+
+<br>d. 監測和分析其服務、產品、流動應用程序和/或網站（視情況而定）的使用情況，以幫助其進一步開發和改善其服務、產品、移動應用程序和 /或網站;<br>
+
+<br>e. 就客戶行為進行研究與開發;<br>
+
+<br>f. 信息管理和數據庫管理;<br>
+
+<br>g. 檢測、調查及/或預防可能違反我們政策或可能違法的活動;<br>
+
+<br>h. 收取或追討您欠FNF的任何債務。<br>
+
+<br>7. 資料準確性<br>
+<br>您可能須向FNF提供您的某些個人資料（尤其是關於您的聯絡資料）以享用某些服務。若您未能按有關要求提供或更新準確的相關個人資料，該等服務的提供或有可能受到影響。<br>
+
+<br>8. 資料保存<br>
+<br>FNF保存您的個人資料的時限將不超過實現目所需或所將需要的時間。若您是FNF有關服務的用戶，您提供的個人資料將被保留至您的服務期限或服務終止後的一段合理時間，以作核實及審計之用。上述情況均受任何法律、法令、法規或會計要求所約束。<br>
+
+<br>9. 第三方商戶<br>
+<br>FNF可能在FNF的網站上有由第三方經營的網上商店或服務及/或產品提供點。若您為使用、訂購或接受任何第三方商戶的服務及/或產品而提供您的個人資料予第三方商戶，請注意，該些個人資料將不受FNF的控制，並因此超出FNF所提供的保護範圍。<br>
+
+
+<br>10. 第三方網站<br>
+<br>FNF的網站或將不時包含其他網站的連結。這些其他網站獨立於FNF的網站。FNF無權控制或管理其他網站的內容或其私隱政策或法律遵守。您須充分注意提供這些連結並不構成FNF認可、批准或與該連結有任何形式上的關聯。FNF對您向其他網站提供的個人資料（如有）無控制權。本私隱政策聲明僅適用於BNB的網站。BNB建議您在提供個人資料予其他網站前，先閱讀其他網站的私隱政策。<br>
+
+<br>11. 服務提供商<br>FNF的服務商須同意，在使用您的個人資料時，遵守其與FNF簽訂的協議以及本私隱政策聲明的規定。<br>
+
+<br>12. 資料的保安<br>
+<br>您所有的個人資料會以安全套接字層(Secure Socket Layer (SSL))技術加密，以確保在您的網頁瀏覽器(Web browser)和我們的網頁伺服器(Web server)之間的個人信息流量的隱私被加密，並防止其被未經授權的使用。<br>
+
+<br>您存儲在我們網站的信用卡資料是由Braintree Vault管理，使用經過驗證的1級PCI DSS兼容服務提供商Braintree的分割知識和雙重控制的多個加密密鑰。為保護您的個人資料，只有已保存的信用卡的最後四位數字可被看到。<br>
+
+<br>您的個人資料的實體記錄將保存在設有接觸限制的安全地方。您的個人資料的電子記錄將保存在FNF的伺服器中，該伺服器也將被放置在安全的地方及受足夠的資料保安措施所保護(例如：當有需要時於互聯網上傳送敏感資料會將之加密)。只有獲得FNF授權的員工(曾接受處理個人資料訓練及有保密責任之人士)才可於“有需要知道”及“有需要使用”時接觸該等記錄及伺服器。<br>
+
+<br>沒有透過互聯網或任何其他公共網絡上傳輸的數據是可保証完全安全的，而您與我們通信的私隱亦非完全可確保。FNF鼓勵您保護您的密碼以防止未經授權的讀取，亦建議您尤其在使用共用電腦的情况下在完成使用註冊帳戶時要登出帳戶。<br>
+
+<br>13. 括免<br>
+<br>FNF將根據法律要求或應任何政府部門、監管機關、執法機構或具有司法管轄權的法院的要求披露您的個人資料。FNF不會為以此方式披露您的個人資料承擔任何責任。<br>
+
+<br>14. 用於法律程序等<br>
+<br>當FNF有必要使用您的個人資料以採取法律行動促使您償還您對FNF的欠款，您同意FNF可將您提供的個人資料用於確認您的身份及對您採取法律行動。<br>
+
+<br>15. 查閱、更改資料及撤回同意<br>
+<br>通過致函FNF的個人資料私隱主任，您有權：-<br>
+
+<br>a. 查閱FNF所存儲的您的個人資料（如有）<br>
+
+<br>b. 要求FNF更正記錄錯誤的您的個人資料（如有）；及<br>
+
+<br>c. 撤回有關使用個人資料之同意 (此撤回或會受影響FNF為您提供服務)。<br>
+
+<br>上述要求將會根據《個人資料（私隱）條例》之規定迅速地處理，FNF可能就處理您的查閱個人資料的要求收取合理費用。<br>
+
+<br>16. 直接促銷<br>
+<br>FNF不可於沒有您的同意下使用您的個人資料作直接促銷。在您同意下，我們可能會根據收集您的個人資料時提供給您的《個人資料收集聲明》使用您的個人資料作直接促銷。您可隨時透過致函FNF的個人資料私隱主任，地址為香港柴灣創富道八號五樓(信封上請註明「保密」字樣)，或電郵至privacy@flower.com，撤回您的同意。<br>
+
+<br>17. 私隱政策的修改<br>
+<br>本私隱政策聲明將不時更新、修改或改變。任何改變、更新或修改將於公佈於FNF的網站時即時生效。FNF建議您定期上FNF的網站查看私隱政策聲明。<br>
+
+<br>18. 控制權的變動<br>
+<br>如FNF其中某些業務的擁有權發生變化，FNF可能有需要將您的個人資料轉移至該些業務的新擁有人，以便新擁有人能繼續經營有關業務。但新擁有人須遵照本私隱政策聲明中的規定使用您的個人資料。您將獲通知有關資料轉移，並可選擇撤回使用個人資料之同意。<br>
+
+<br>19. 查詢<br>
+<br>若您有任何疑問，或欲查閱、更改FNF存儲您的個人資料或撤回使用個人資料之同意，歡迎與FNF的個人資料私隱主任聯絡：<br>
+
+<br>大企業有限公司以美麗花坊(FNF)作為營運名稱香港柴灣創富道十八號五樓<br>
+
+<br>個人資料私隱主任收<br>
+
+<br>(信封上請註明「保密」字樣) ，或電郵至privacy@flower.com。<br>
+<br>
+
+<footer>
+        <div class="footer">
+        <div class="footer_Introduction">
+            <h5>美麗花坊</h5>
+            <p>美麗花坊是一家高級當地精品花店及花藝設計工作室，提供鮮花、永生花、花束和氣球禮盒。歡迎您透過美麗花坊訂購鮮花，送給您的摯愛親朋。每份花藝禮物均由專業花藝師手工製作，可直接送貨上門或到店自取。</p>
+        </div>
+        <div class="footer_Information">
+            <h5>資訊</h5>
+            <ui>
+                <li><a href="./VisitUs.html">歡迎光臨</a></li>
+                <li><a href="./contact.html">聯絡我們</a></li>
+                <li><a href="./delivery.html">取貨和送貨</a></li>
+                <li><a href="./FAQ.html">常問問題</a></li>
+            </ui>
+        </div>
+        <div class="footer_About">
+            <h5>關於</h5>
+            <ui>
+                <li><a href="./about.html">關於美麗花坊</a></li>
+                <li><a href="./privacy_policy.html">私隱政策聲明</a></li>
+            </ui>
+        </div>
+        </div>
+        <div class="footer_Name">
+            <h5>Made by Mok Chi Him</h5>
+        </div>
+    </footer>
+    <script src="./JavaScript/Navbar.js"></script>
+    <script src="./JavaScript/ShoppingCart.js"></script>
+  
+</body></html>
+   
+   
+    
+   
+

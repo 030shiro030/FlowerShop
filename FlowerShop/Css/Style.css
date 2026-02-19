@@ -1,0 +1,573 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+  height: 100%;
+  /* box-sizing: border-box;
+  display:flex;
+  align-items: center;
+  justify-content: center; */
+  /* display: flex; */
+}
+
+*:not(.listCart)::-webkit-scrollbar {
+  /* 隱藏scrollbar */
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  display: none;
+}
+
+.Test{
+    height: 100vh;
+}
+
+main{
+    flex: 1;
+}
+
+/* Header */
+header{
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  z-index: 1;
+  background-color: rgb(250, 249, 249);
+}
+
+header h1{
+  color: rgb(65, 65, 65);
+  position: absolute;
+  /* icon 位置 */
+  left: 50px;
+  top: 0;
+  line-height: 80px;
+  cursor: default;
+}
+
+header img{
+  position: relative;
+  height: 100px;
+  bottom: 10px;
+  
+}
+/* rgb(250, 249, 249); */
+/* Navbar */
+.navicon{
+  position: absolute;
+  top: 25px;
+  left: 5%;
+  display: none;
+}
+
+.navicon img{
+  height: 30px;
+}
+
+.navbar{
+  overflow: hidden;
+  background-color: rgb(250, 249, 249);
+  height: 80px;
+  width: 100%;
+  margin-left: 150px;
+}
+
+header{
+  border-bottom:2px solid rgb(236, 236, 236);
+}
+
+.navbar .navbar_01 .nav{
+  float: left;
+  width: 50px;
+  /* top: 30px;
+  left: 20%; */
+  font-size: 16px;
+  color: rgb(65, 65, 65);
+  text-align: center;
+  text-decoration: none;
+  padding: 29px 16px;
+}
+
+.navbar .navbar_01 .nav:hover,.navbar .navbar_02 a:hover,.dropdown-Holiday li:hover{
+    background-color: rgb(230, 230, 230);
+}
+
+.navbar .navbar_02 a{
+  float: right;
+  width: 30px;
+  /* top: 10px;
+  left: 90%; */
+  font-size: 16px;
+  color: rgb(65, 65, 65);
+  text-align: center;
+  text-decoration: none;
+  padding: 29px 16px;
+}
+
+.navbar .navbar_02{
+    position: relative;
+    right: 180px;
+}
+
+.nav_main.Cart{
+  cursor: pointer;
+}
+
+/* SideNavbar */
+.sidenav,.sideFlowerNav{
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  height: 100vh;
+  width: 300px;
+  background-color: rgb(250, 249, 249);
+  transition: 0.5s;
+}
+
+.sidenav li,.sideFlowerNav li{
+  list-style: none;
+}
+
+.sidenav a,.sideFlowerNav a{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 15px;
+  font-size: 15px;
+  color: rgb(65, 65, 65);
+  cursor: pointer;
+}
+
+.close{
+  width: 0px;
+  transition: 0.5s;
+}
+
+.navCloseIcon{
+  position: relative;
+  right: 120px;
+}
+
+.navCloseIcon img{
+  height: 30px;
+}
+
+/* li */
+.sideFlowerNav li a{
+  display: block;
+  margin-top: 5px;
+  position: relative;
+  text-align: left;
+  left: 150px;
+  font-size: 12px;
+}
+
+.sideNav_bouquet-ul, .sideNav_flowerBoxes-ul,.sideNav_collection-ul,.sideNav_wedding-ul,.sideNav_arrangements-ul,.sideNav_flowerStands-ul,.sideNav_festival-ul{
+    max-height: 0; 
+    opacity: 0; 
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease; 
+    background-color: #f9f9f9; 
+}
+
+.show {
+  max-height: 200px;
+  opacity: 1; 
+}
+
+/* Cart */
+
+.sideCartNav{
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  height: 100vh;
+  width: 400px;
+  background-color: rgb(250, 249, 249);
+  transition: 0.5s;
+}
+
+.close{
+  width: 0px;
+  transition: 0.5s;
+}
+
+.navCloseIcon_Cart img{
+  height: 30px;
+}
+
+.navCloseIcon_Cart{
+  position: relative;
+  left: 10px;
+  top: 10px;
+}
+
+a.sideCartNav-Text {
+  position: relative;
+  left: 280px;
+  color: rgb(65, 65, 65);
+
+}
+
+.sideCartNav-Div-NullText{
+  height: 100%;
+  position: absolute;
+  left: 150px;
+  top: 400px
+  
+}
+
+.sideCartNav-Div-ToPay{
+  position: absolute;
+  background-color: rgb(250, 249, 249);
+  height: 150px;
+  width: 100%;
+  bottom: 80px;
+  border-top: 1px solid rgb(230, 230, 230);
+}
+
+.sideCartNav-ToPay{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 15px;
+  font-size: 15px;
+  color: rgb(65, 65, 65);
+}
+
+.sideCartNav-ToPay-Btn{
+  position: relative;
+  top: 40px;
+  left: 80px;
+  text-decoration: none;
+  padding: 10px 100px;
+  background-color: rgb(247, 217, 122);
+  color: rgb(65, 65, 65);
+}
+
+/* Cart Item */
+.listCart{
+  margin-top: 30px;
+  width: 92%;
+  margin-left: 30px;
+  height: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.listCart{
+  color: rgb(65, 65, 65);
+}
+
+.CartItem{
+  height: 180px;
+  /* background-color: aqua; */
+  margin-bottom: 30px;
+}
+
+.CartItem .image img{
+  height: 150px;
+}
+
+.CartItem .name{
+  position: relative;
+  left: 120px;
+  bottom: 150px;
+}
+
+.CartItem .type{
+  position: relative;
+  left: 120px;
+  bottom: 140px;
+}
+
+.CartItem .totalPrice{
+  position: relative;
+  left: 120px;
+  bottom: 130px;
+}
+
+.CartItem .quantity{
+  position: relative;
+  left: 120px;
+  bottom: 100px;
+  display: inline;
+}
+
+.CartItem a{
+  border: 2px solid rgb(230, 230, 230);
+  border-radius: 100%;
+  padding: 0px 5px;
+}
+
+.CartItem .minus{
+  padding: 0px 7.5px;
+  cursor: pointer;
+}
+
+.CartItem .num{
+  border-radius: 5px;
+  cursor: default;
+}
+
+.CartItem .plus{
+  cursor: pointer;
+}
+
+.CartItem .removeDiv a{
+  border: 0px;
+  border-bottom: 1px solid;
+  width: 45px;
+  border-radius: 0px;
+  padding:0;
+  cursor: pointer;
+  position: relative;
+  left: 140px;
+  bottom: 20px;
+}
+
+.CartItem .removeDiv a:hover{
+  color: rgb(0, 0, 0);
+}
+
+.hide{
+  display: none;
+}
+
+/* Dropdown */
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown a {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 8px 0px;
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  display: block;
+  visibility: visible;
+  max-height: 230px;
+}
+
+.row-center{
+    display: flex;
+    justify-content: center;
+}
+
+.column {
+  display: flexbox;
+  float: left;
+  width: 12%;
+  padding-top: 20px;
+  background-color: rgb(250, 249, 249);
+  text-align: left;
+  justify-content: center;
+}
+
+.dropdown-content h3{
+  font-size: 15px;
+  color: rgb(65, 65, 65);
+  cursor: default;
+}
+
+.column a {
+  float: none;
+  color: rgb(100, 100, 100);
+  /* padding: 10px;
+  margin-top: 10px; */
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 12px;
+}
+
+.column a:hover{
+  color: rgb(0, 0, 0);
+  
+
+}
+
+.dropdown-content {
+  float: left;
+  visibility: hidden;
+  position: absolute;
+  background-color: rgb(250, 249, 249);
+  height: 230px;
+  width: 100%;
+  top: 78px;
+  left: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+  z-index: 1;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* dropdown-Holiday */
+
+
+.dropdown-Holiday ul{
+  display: inline-block;
+  position: absolute;
+  top: 78px;
+  left: 232px;
+  
+}
+
+.dropdown-Holiday li{
+  list-style: none;
+  padding: 10px 27px;
+  background-color: rgb(250, 249, 249);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  
+}
+
+.dropdown-Holiday a{
+  text-decoration: none;
+  color: rgb(65, 65, 65);
+}
+
+.dropdown-Holiday-content{
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+.dropdown-Holiday:hover .dropdown-Holiday-content{
+  opacity: 1;
+  display: block;
+  visibility: visible;
+  max-height: 200px;
+}
+
+.dropdown-Holiday-content a:hover{
+  color: rgb(0, 0, 0);
+}
+
+
+/* Footer */
+
+footer .footer{
+    background-color: rgb(250, 249, 249);
+    color: white;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    text-align: center;
+    z-index: 1;
+}
+
+footer{
+    background-color: rgb(250, 249, 249);
+    
+    bottom: 0%;
+    height: 300px;
+    width: 100%;
+}
+
+footer h5{
+  color: rgb(65, 65, 65);
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+footer p{
+  color: rgb(100, 100, 100);
+  font-size: 14px;
+}
+
+.footer_Introduction,.footer_Information,.footer_About{
+  width: 20%;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 80px;
+}
+
+.footer_Introduction p,.footer_Introduction h5{
+  float: left;
+}
+
+.footer_Information a, .footer_About a{
+  text-decoration: none;
+  color: rgb(100, 100, 100);
+  font-size: 14px;
+}
+
+.footer_Information li, .footer_About li{
+  list-style: none;
+}
+
+.footer_Information a:hover, .footer_About a:hover{
+  color: rgb(0, 0, 0);
+}
+
+.footer_Name{
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+}
+
+.footer_Name h5{
+  font-size: 12px;
+}
+
+/* 響應式網頁設計 */
+
+@media screen and (max-width: 3000px) {
+  footer{
+    height: 500px;
+  }
+}
+@media screen and (max-width: 768px) {
+
+  /* navbar */
+  .navbar_01{
+    display: none;
+  }
+
+  .navbar_02 a{
+    margin-left: -20px;
+  }
+
+  .navbar .navbar_02{
+    position: relative;
+    right: 150px;
+}
+
+  .icon{
+    left: 50%;
+  }
+
+  .navicon{
+    display: block;
+  }
+
+}
+
+@media screen and (max-width: 450px) {
+  .navbar_02{
+    display: none;
+  }
+}
+
